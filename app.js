@@ -5,7 +5,7 @@ function getYouTubeData(searchTerm, callback) {
     part: "snippet",
     key: "AIzaSyC4454ERtY26uudb6dEFAVw2Zmlt5j_M6s",
     q: searchTerm,
-    maxResults: 10
+    maxResults: 50
   };
   $.getJSON(YOUTUBE_BASE_URL, query, callback);
 }
@@ -14,7 +14,7 @@ function displayData(data) {
   var resultElement = '<p>No Results</p>';
   if (data.items) {
     resultElement = data.items.map(function(item) {
-      return '<a href="https://www.youtube.com/watch?v=M1djO19aSFQ" class="iframe" data-featherlight="iframe"><img src="' + item.snippet.thumbnails.medium.url + '" class="thumbnail"/></a>';
+      return '<a href="https://www.youtube.com/embed/'+item.id.videoId+'?autoplay=1" class="iframe" data-featherlight="iframe" data-featherlight-iframe-max-width:"100%", data-featherlight-iframe-width="800px", data-featherlight-iframe-height="500px"><img src="' + item.snippet.thumbnails.default.url + '" class="thumbnail"/></a>';
     });
   }
   $('.js-search-results').html(resultElement);

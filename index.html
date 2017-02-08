@@ -3,26 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-  <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+  <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>Search For your favorite YouTube Video</h1>
-    <form action="#" class="js-search-form">
-      <label for="query"></label>
-      <input type="text" class="js-query">
-      <button type="submit">Search</button>
-    </form>
+    <div class="container">
+      <h1>Search For Your Favorite YouTube Video</h1>
+      <form action="#" class="js-search-form">
+        <label for="query"></label>
+        <input type="text" class="js-query" placeholder="e.g kittens"required>
+        <button type="submit">Search</button>
+      </form>
+      <p class="instructions">Click on any video to watch it right away!</p>
+    </div>
 
-    <div class="js-search-results"></div>
-
-    <!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/yMiCCtdUOgM" frameborder="0" allowfullscreen></iframe> -->
+    <div class="js-search-results search-results"></div>
 
 
     <script
       src="https://code.jquery.com/jquery-3.1.1.js"
       integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
       crossorigin="anonymous"></script>
-    <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.rawgit.com/noelboss/featherlight/1.7.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

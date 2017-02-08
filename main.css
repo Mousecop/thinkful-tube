@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+img.thumbnail {
+  margin: 10px;
+  height: 129px;
+  width: 172px;
+}
+
+.search-results {
+  margin-left: 33px;
+  margin-top: 93px;
+  margin-right: 33px;
+}
+
+.container {
+  text-align: center;
+}
